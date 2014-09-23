@@ -10,7 +10,8 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var beacons: [CLBeacon]!
+    var beacons:[CLBeacon] = []
+    var beaconIdentifiers:[BeaconDescriptor] = []
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -28,8 +29,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 extension ViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(beacons != nil) {
-            return beacons!.count
+        if(beacons.count > 0) {
+            return beacons.count
         } else {
             return 0
         }
@@ -42,7 +43,7 @@ extension ViewController: UITableViewDataSource {
             cell!.selectionStyle = UITableViewCellSelectionStyle.None
         }
         
-        let beacon:CLBeacon = beacons![indexPath.row]
+        let beacon:CLBeacon = beacons[indexPath.row]
         var proximityLabel:String! = ""
         
         switch beacon.proximity {
@@ -64,7 +65,8 @@ extension ViewController: UITableViewDataSource {
         let detailLabel:String = "Major: \(beacon.major.integerValue), " +
             "Minor: \(beacon.minor.integerValue), " +
             "RSSI: \(beacon.rssi as Int), " +
-            "UUID: \(beacon.proximityUUID.UUIDString)"
+            "UUID: \(beacon.proximityUUID.UUIDString)" +
+            "Internal name: \(beaconIdentifiers[0].beaconId)"
         cell!.detailTextLabel?.text = detailLabel
         
         return cell!

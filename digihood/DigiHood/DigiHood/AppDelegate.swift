@@ -13,30 +13,84 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-    var locationManager: CLLocationManager?
+    var locationManager1: CLLocationManager?
+    var locationManager2: CLLocationManager?
+    var locationManager3: CLLocationManager?
     var lastProximity: CLProximity?
+    var beaconIdentifiers: [BeaconDescriptor] = []
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // REGION 1
-        let uuidString = "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6"
-        let beaconIdentifier = "Marcus"
-        let beaconeUUID = NSUUID(UUIDString: uuidString)
-        let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconeUUID, identifier: beaconIdentifier)
         
-        // REGION 2
-        
-        // REGION 3
-        
-        locationManager = CLLocationManager()
-        if(locationManager!.respondsToSelector("requestAlwaysAuthorization")) {
-            locationManager!.requestAlwaysAuthorization()
+        if(application.respondsToSelector("registerUserNotificationSettings:")) {
+            application.registerUserNotificationSettings(
+                UIUserNotificationSettings(
+                    forTypes: UIUserNotificationType.Alert | UIUserNotificationType.Sound,
+                    categories: nil
+                )
+            )
         }
         
-        locationManager!.delegate = self
-        locationManager!.pausesLocationUpdatesAutomatically = false
+        // setup beacons
+        var b1:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6", identifier:"Marcus")
+        var b2:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA7", identifier:"Roberta")
+        var b3:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA8", identifier:"Abeacon")
         
-        locationManager!.startMonitoringForRegion(beaconRegion)
-        locationManager!.startRangingBeaconsInRegion(beaconRegion)
-        locationManager!.startUpdatingLocation()
+        beaconIdentifiers.append(b1)
+        beaconIdentifiers.append(b2)
+        beaconIdentifiers.append(b3)
+        
+        // REGION 1
+        var b1ID = b1.beaconId
+        var b1String = b1.identifier
+        var uid1 = NSUUID(UUIDString: b1ID)
+        let beaconRegion1:CLBeaconRegion = CLBeaconRegion(proximityUUID: uid1, identifier: b1String)
+        // initialize beacon manager
+        locationManager1 = CLLocationManager()
+        if(locationManager1!.respondsToSelector("requestAlwaysAuthorization")) {
+            locationManager1!.requestAlwaysAuthorization()
+        }
+        
+        locationManager1!.delegate = self
+        locationManager1!.pausesLocationUpdatesAutomatically = false
+
+        locationManager1!.startMonitoringForRegion(beaconRegion1)
+        locationManager1!.startRangingBeaconsInRegion(beaconRegion1)
+        locationManager1!.startUpdatingLocation()
+        
+        // REGION 2
+        var b2ID = b2.beaconId
+        var b2String = b2.identifier
+        var uid2 = NSUUID(UUIDString: b2ID)
+        let beaconRegion2:CLBeaconRegion = CLBeaconRegion(proximityUUID: uid2, identifier: b2String)
+        // initialize beacon manager
+        locationManager2 = CLLocationManager()
+        if(locationManager2!.respondsToSelector("requestAlwaysAuthorization")) {
+            locationManager2!.requestAlwaysAuthorization()
+        }
+        
+        locationManager2!.delegate = self
+        locationManager2!.pausesLocationUpdatesAutomatically = false
+        
+        locationManager2!.startMonitoringForRegion(beaconRegion2)
+        locationManager2!.startRangingBeaconsInRegion(beaconRegion2)
+        locationManager2!.startUpdatingLocation()
+
+        // REGION 3
+        var b3ID = b3.beaconId
+        var b3String = b3.identifier
+        var uid3 = NSUUID(UUIDString: b3ID)
+        let beaconRegion3:CLBeaconRegion = CLBeaconRegion(proximityUUID: uid3, identifier: b3String)
+        // initialize beacon manager
+        locationManager3 = CLLocationManager()
+        if(locationManager3!.respondsToSelector("requestAlwaysAuthorization")) {
+            locationManager3!.requestAlwaysAuthorization()
+        }
+        
+        locationManager3!.delegate = self
+        locationManager3!.pausesLocationUpdatesAutomatically = false
+        
+        locationManager3!.startMonitoringForRegion(beaconRegion3)
+        locationManager3!.startRangingBeaconsInRegion(beaconRegion3)
+        locationManager3!.startUpdatingLocation()
         
         return true
     }
@@ -92,9 +146,9 @@ extension AppDelegate: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!,
         didRangeBeacons beacons: [AnyObject]!,
         inRegion region: CLBeaconRegion!) {
-            NSLog("didRangeBeacons");
             let viewController:ViewController = window!.rootViewController as ViewController
-            viewController.beacons = beacons as [CLBeacon]!
+            viewController.beacons = beacons as [CLBeacon]
+            viewController.beaconIdentifiers = beaconIdentifiers
             viewController.tableView.reloadData()
             
             var message:String = ""
