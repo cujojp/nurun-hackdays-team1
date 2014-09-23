@@ -13,6 +13,7 @@
 		8330239219D1E96800AC5230 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8330239119D1E96800AC5230 /* Images.xcassets */; };
 		8330239519D1E96800AC5230 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330239319D1E96800AC5230 /* LaunchScreen.xib */; };
 		833023A119D1E96800AC5230 /* DigiHoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833023A019D1E96800AC5230 /* DigiHoodTests.swift */; };
+		833023AB19D1EDDD00AC5230 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833023AA19D1EDDD00AC5230 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8330239A19D1E96800AC5230 /* DigiHoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigiHoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8330239F19D1E96800AC5230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		833023A019D1E96800AC5230 /* DigiHoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiHoodTests.swift; sourceTree = "<group>"; };
+		833023AA19D1EDDD00AC5230 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833023AB19D1EDDD00AC5230 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		8330237C19D1E96800AC5230 = {
 			isa = PBXGroup;
 			children = (
+				833023AA19D1EDDD00AC5230 /* CoreLocation.framework */,
 				8330238719D1E96800AC5230 /* DigiHood */,
 				8330239D19D1E96800AC5230 /* DigiHoodTests */,
 				8330238619D1E96800AC5230 /* Products */,
@@ -161,6 +165,12 @@
 				TargetAttributes = {
 					8330238419D1E96800AC5230 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = V8LSQT22X9;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					8330239919D1E96800AC5230 = {
 						CreatedOnToolsVersion = 6.0;
