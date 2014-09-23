@@ -73,10 +73,30 @@ extension AppDelegate: CLLocationManagerDelegate {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
+    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+        manager.startRangingBeaconsInRegion(region as CLBeaconRegion)
+        manager.startUpdatingLocation()
+        
+        NSLog("You entered a region")
+        sendLocalNotificationWithMessage("You entered a region")
+    }
+    
+    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+        manager.stopRangingBeaconsInRegion(region as CLBeaconRegion)
+        manager.stopUpdatingLocation()
+        
+        NSLog("You exited a region")
+        sendLocalNotificationWithMessage("You exited a region")
+    }
+    
     func locationManager(manager: CLLocationManager!,
         didRangeBeacons beacons: [AnyObject]!,
         inRegion region: CLBeaconRegion!) {
             NSLog("didRangeBeacons");
+            let viewController:ViewController = window!.rootViewController as ViewController
+            viewController.beacons = beacons as [CLBeacon]!
+            viewController.tableView.reloadData()
+            
             var message:String = ""
             
             if(beacons.count > 0) {
