@@ -1,0 +1,96 @@
+$modal_height: 600px;
+
+// Disable body scrolling when the modal is open
+body.modal-open {
+  overflow: hidden;
+}
+
+
+
+// Recalculate z-index where appropriate,
+// but only apply to elements within modal
+.modal-open .modal {
+
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: px-em( $modal_height );
+  margin-top: -( px-em( $modal_height ) / 2) !important;
+
+  &.fade {
+    @include transition(opacity .3s linear, top .3s ease-out);
+    top: -25%;
+  }
+
+  &.fade.fade-only {
+    top: 50%;
+  }
+
+  &.fade.in { top: 50%; }
+}
+
+// This is now the main modal that you see
+.modal-inner {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  background-color: $white;
+  @include box-shadow(0 0 1.875em rgba(39, 43, 55, 0.15));
+
+  &.transparent {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+
+  // Do something for browsers without box shadow to show depth
+  .no-boxshadow & {
+    border: 1px solid $gray40;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+  background-color: rgba($white, .8);
+  // Fade for backdrop
+  @include transition(opacity .3s linear);
+  &.fade { opacity: 0; }
+}
+
+.modal-overlay,
+.modal-overlay.fade.in {
+  @include opacity(70);
+}
+
+.add-location-modal {
+  width: 492px;
+  left: 50%;
+  margin-left: -248px;
+
+  .modal-inner {
+    padding: 0 5% $grid_baseline_height;
+  }
+
+  .add-field {
+    width: 65%;
+  }
+
+  .selector {
+    color: $gray40;
+    background: $gray100;
+    width: 65%;
+  }
+
+  .label {
+    @include grid(2);    
+  }
+}

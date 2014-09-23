@@ -1,0 +1,68 @@
+{
+  "beacons":[
+  {
+    "id": "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6",
+    "name": "Blue Bottle",
+    "devices": [],
+    "notifications": {
+      "type": "reward",
+      "message": "Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", 
+      "description": [
+        {
+          "id": "ff19a6a6b4430bae3fbc6c9be1ce75f79a189ed9",
+          "config": {
+            "body": {
+              "title": "Nullam quis ante",
+              "paragraph": "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.",
+              "image": null
+            },
+            "cta": {
+              "text": "Give Back."
+            },
+            "from": {
+              "name": "Jessica",
+              "id": "15d834b328bb637eeef49b6624774bded566b659",
+              "avatar": null
+            },
+            "to": {
+              "name": "Craig",
+              "id": "c4b5a8c0fafd56ae12499ba1d5d55022dbe4108e",
+              "avatar": null
+            },
+            "value": {
+              "quantity": 40,
+              "currency": "BTC"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6",
+    "name": "Hayes Valley",
+    "devices": [],
+    "notifications": {
+      "type": "donate",
+      "message": "Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", 
+      "description": [
+        {
+          "id": "ff19a6a6b4430bae3fbc6c9be1ce75f79a189ed9",
+          "config": {
+            "body": {
+              "title": "Nullam quis ante",
+              "paragraph": "Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.",
+              "image": null
+            },
+            "cta": {
+              "text": "Donate"
+            },
+            "from": null,
+            "to": null,
+            "value": null
+          }
+        }
+      ]
+    }
+  }
+]}

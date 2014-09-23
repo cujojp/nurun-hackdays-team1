@@ -1,0 +1,58 @@
+.location-list-container {
+  margin: 100px 0 125px;
+  overflow: hidden;
+}
+
+.location-list {
+  clear: both;
+  margin: 0;
+  padding: 0;
+
+  .location-item {
+    float: left;
+    clear: both;
+    overflow: hidden;
+  }
+
+  .map-container {
+    img {
+      border: 1px solid $gray70;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .location-container {
+    position: relative;
+    height: 250px;
+  }
+
+  .col-right {
+    position: relative;
+    height: 100%;
+  }
+
+  .location-options {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }    
+
+    li {
+      border-right: 1px solid $gray80;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+}
+

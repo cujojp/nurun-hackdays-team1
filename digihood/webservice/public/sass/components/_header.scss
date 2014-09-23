@@ -1,0 +1,28 @@
+.mast-head {
+  padding: 35px 0 25px;
+
+  .logo-type {
+    margin: 0 auto;
+    background: {
+      position: 50% 50%;
+    }     
+  } // end .logo-type
+} // end .mast-head
+
+.label-wrap {
+  text-align: center;
+
+  .label {
+    width: 100%;
+    float: none !important;
+    display: inline-block !important;
+    text-align: center;
+    background: $black;
+    padding: 5px 0;
+
+    p {
+      margin: 0;
+      color: $white;
+    }
+  }
+}
