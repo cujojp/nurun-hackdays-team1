@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5BDB6733-2630-4649-A813-FC8EACFCA56C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GimbalDev</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>29DAABF0-16FF-4A81-BE5D-60B46D461DF5</key>
+		<string>ssh://bitbucket.org/emmanuellalande/sfo-gimbal-prototype-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GimbalDev/GimbalDev.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>29DAABF0-16FF-4A81-BE5D-60B46D461DF5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://bitbucket.org/emmanuellalande/sfo-gimbal-prototype-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>29DAABF0-16FF-4A81-BE5D-60B46D461DF5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>29DAABF0-16FF-4A81-BE5D-60B46D461DF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sfo-gimbal-prototype-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

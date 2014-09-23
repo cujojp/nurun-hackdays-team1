@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15E96E0818DCF2DC0092C115 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E0718DCF2DC0092C115 /* Foundation.framework */; };
+		15E96E0A18DCF2DC0092C115 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E0918DCF2DC0092C115 /* CoreGraphics.framework */; };
+		15E96E0C18DCF2DC0092C115 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E0B18DCF2DC0092C115 /* UIKit.framework */; };
+		15E96E1218DCF2DC0092C115 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E96E1018DCF2DC0092C115 /* InfoPlist.strings */; };
+		15E96E1418DCF2DC0092C115 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E96E1318DCF2DC0092C115 /* main.m */; };
+		15E96E1818DCF2DC0092C115 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E96E1718DCF2DC0092C115 /* AppDelegate.m */; };
+		15E96E1A18DCF2DC0092C115 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E96E1918DCF2DC0092C115 /* Images.xcassets */; };
+		15E96E2118DCF2DC0092C115 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E2018DCF2DC0092C115 /* XCTest.framework */; };
+		15E96E2218DCF2DC0092C115 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E0718DCF2DC0092C115 /* Foundation.framework */; };
+		15E96E2318DCF2DC0092C115 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E0B18DCF2DC0092C115 /* UIKit.framework */; };
+		15E96E2B18DCF2DC0092C115 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E96E2918DCF2DC0092C115 /* InfoPlist.strings */; };
+		15E96E2D18DCF2DC0092C115 /* GimbalDevTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E96E2C18DCF2DC0092C115 /* GimbalDevTests.m */; };
+		15E96E3718DCF50B0092C115 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E3618DCF50B0092C115 /* CoreBluetooth.framework */; };
+		15E96E3918DCF6630092C115 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E3818DCF6630092C115 /* CoreLocation.framework */; };
+		15E96E3B18DCF6720092C115 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E3A18DCF6720092C115 /* CoreData.framework */; };
+		15E96E3D18DCF6790092C115 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E3C18DCF6790092C115 /* libz.dylib */; };
+		15E96E3F18DCF6800092C115 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E3E18DCF6800092C115 /* MapKit.framework */; };
+		15E96E4118DCF6860092C115 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E4018DCF6860092C115 /* Security.framework */; };
+		15E96E5C18DCF9D90092C115 /* FYX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E4E18DCF9D90092C115 /* FYX.framework */; };
+		15E96E5D18DCF9D90092C115 /* ContextLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E5018DCF9D90092C115 /* ContextLocation.framework */; };
+		15E96E5E18DCF9D90092C115 /* DataModels.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15E96E5218DCF9D90092C115 /* DataModels.bundle */; };
+		15E96E5F18DCF9D90092C115 /* ContextCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E5418DCF9D90092C115 /* ContextCore.framework */; };
+		15E96E6018DCF9D90092C115 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E5718DCF9D90092C115 /* NetworkServices.framework */; };
+		15E96E6118DCF9D90092C115 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E96E5A18DCF9D90092C115 /* Common.framework */; };
+		15E96E6418DCFB2B0092C115 /* ProximityServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E96E6318DCFB2B0092C115 /* ProximityServiceManager.m */; };
+		1A38838318DE3523007E43A4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38838218DE3523007E43A4 /* SettingsViewController.m */; };
+		1A38838918DE355C007E43A4 /* ShopperOutOfRangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38838818DE355C007E43A4 /* ShopperOutOfRangeViewController.m */; };
+		1A38838C18DE3568007E43A4 /* ShopperInStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38838B18DE3568007E43A4 /* ShopperInStoreViewController.m */; };
+		1A38838F18DE3880007E43A4 /* ShopperNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38838E18DE3880007E43A4 /* ShopperNavigationController.m */; };
+		1ADE851618E7D4BC0082E386 /* LocalNotificationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE851518E7D4BC0082E386 /* LocalNotificationHelper.m */; };
+		1ADE851918E7D5850082E386 /* DeepLinkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE851818E7D5850082E386 /* DeepLinkHelper.m */; };
+		1ADE851E18E7DCAF0082E386 /* VisistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE851D18E7DCAF0082E386 /* VisistManager.m */; };
+		1ADE852118E7DE1A0082E386 /* SightingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE852018E7DE1A0082E386 /* SightingManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15E96E2418DCF2DC0092C115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15E96DFC18DCF2DC0092C115 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15E96E0318DCF2DC0092C115;
+			remoteInfo = GimbalDev;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15E96E0418DCF2DC0092C115 /* gimbaldev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gimbaldev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E96E0718DCF2DC0092C115 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15E96E0918DCF2DC0092C115 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		15E96E0B18DCF2DC0092C115 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		15E96E0F18DCF2DC0092C115 /* GimbalDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GimbalDev-Info.plist"; sourceTree = "<group>"; };
+		15E96E1118DCF2DC0092C115 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15E96E1318DCF2DC0092C115 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15E96E1518DCF2DC0092C115 /* GimbalDev-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GimbalDev-Prefix.pch"; sourceTree = "<group>"; };
+		15E96E1618DCF2DC0092C115 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		15E96E1718DCF2DC0092C115 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		15E96E1918DCF2DC0092C115 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15E96E1F18DCF2DC0092C115 /* GimbalDevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GimbalDevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E96E2018DCF2DC0092C115 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		15E96E2818DCF2DC0092C115 /* GimbalDevTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GimbalDevTests-Info.plist"; sourceTree = "<group>"; };
+		15E96E2A18DCF2DC0092C115 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15E96E2C18DCF2DC0092C115 /* GimbalDevTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GimbalDevTests.m; sourceTree = "<group>"; };
+		15E96E3618DCF50B0092C115 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		15E96E3818DCF6630092C115 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		15E96E3A18DCF6720092C115 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		15E96E3C18DCF6790092C115 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		15E96E3E18DCF6800092C115 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		15E96E4018DCF6860092C115 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		15E96E4E18DCF9D90092C115 /* FYX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FYX.framework; sourceTree = "<group>"; };
+		15E96E5018DCF9D90092C115 /* ContextLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextLocation.framework; sourceTree = "<group>"; };
+		15E96E5218DCF9D90092C115 /* DataModels.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DataModels.bundle; sourceTree = "<group>"; };
+		15E96E5418DCF9D90092C115 /* ContextCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextCore.framework; sourceTree = "<group>"; };
+		15E96E5718DCF9D90092C115 /* NetworkServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = "<group>"; };
+		15E96E5A18DCF9D90092C115 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Common.framework; sourceTree = "<group>"; };
+		15E96E6218DCFB2B0092C115 /* ProximityServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProximityServiceManager.h; sourceTree = "<group>"; };
+		15E96E6318DCFB2B0092C115 /* ProximityServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProximityServiceManager.m; sourceTree = "<group>"; };
+		1A38838118DE3523007E43A4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1A38838218DE3523007E43A4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		1A38838718DE355C007E43A4 /* ShopperOutOfRangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopperOutOfRangeViewController.h; sourceTree = "<group>"; };
+		1A38838818DE355C007E43A4 /* ShopperOutOfRangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopperOutOfRangeViewController.m; sourceTree = "<group>"; };
+		1A38838A18DE3568007E43A4 /* ShopperInStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopperInStoreViewController.h; sourceTree = "<group>"; };
+		1A38838B18DE3568007E43A4 /* ShopperInStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopperInStoreViewController.m; sourceTree = "<group>"; };
+		1A38838D18DE3880007E43A4 /* ShopperNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopperNavigationController.h; sourceTree = "<group>"; };
+		1A38838E18DE3880007E43A4 /* ShopperNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopperNavigationController.m; sourceTree = "<group>"; };
+		1ADE851418E7D4BC0082E386 /* LocalNotificationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotificationHelper.h; sourceTree = "<group>"; };
+		1ADE851518E7D4BC0082E386 /* LocalNotificationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationHelper.m; sourceTree = "<group>"; };
+		1ADE851718E7D5850082E386 /* DeepLinkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepLinkHelper.h; sourceTree = "<group>"; };
+		1ADE851818E7D5850082E386 /* DeepLinkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeepLinkHelper.m; sourceTree = "<group>"; };
+		1ADE851C18E7DCAF0082E386 /* VisistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisistManager.h; sourceTree = "<group>"; };
+		1ADE851D18E7DCAF0082E386 /* VisistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisistManager.m; sourceTree = "<group>"; };
+		1ADE851F18E7DE1A0082E386 /* SightingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SightingManager.h; sourceTree = "<group>"; };
+		1ADE852018E7DE1A0082E386 /* SightingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SightingManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15E96E0118DCF2DC0092C115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E96E5D18DCF9D90092C115 /* ContextLocation.framework in Frameworks */,
+				15E96E4118DCF6860092C115 /* Security.framework in Frameworks */,
+				15E96E6018DCF9D90092C115 /* NetworkServices.framework in Frameworks */,
+				15E96E3F18DCF6800092C115 /* MapKit.framework in Frameworks */,
+				15E96E3D18DCF6790092C115 /* libz.dylib in Frameworks */,
+				15E96E6118DCF9D90092C115 /* Common.framework in Frameworks */,
+				15E96E3B18DCF6720092C115 /* CoreData.framework in Frameworks */,
+				15E96E3918DCF6630092C115 /* CoreLocation.framework in Frameworks */,
+				15E96E3718DCF50B0092C115 /* CoreBluetooth.framework in Frameworks */,
+				15E96E5F18DCF9D90092C115 /* ContextCore.framework in Frameworks */,
+				15E96E0A18DCF2DC0092C115 /* CoreGraphics.framework in Frameworks */,
+				15E96E0C18DCF2DC0092C115 /* UIKit.framework in Frameworks */,
+				15E96E5C18DCF9D90092C115 /* FYX.framework in Frameworks */,
+				15E96E0818DCF2DC0092C115 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E96E1C18DCF2DC0092C115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E96E2118DCF2DC0092C115 /* XCTest.framework in Frameworks */,
+				15E96E2318DCF2DC0092C115 /* UIKit.framework in Frameworks */,
+				15E96E2218DCF2DC0092C115 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15E96DFB18DCF2DC0092C115 = {
+			isa = PBXGroup;
+			children = (
+				15E96E0D18DCF2DC0092C115 /* GimbalDev */,
+				15E96E2618DCF2DC0092C115 /* GimbalDevTests */,
+				15E96E0618DCF2DC0092C115 /* Frameworks */,
+				15E96E0518DCF2DC0092C115 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15E96E0518DCF2DC0092C115 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E0418DCF2DC0092C115 /* gimbaldev.app */,
+				15E96E1F18DCF2DC0092C115 /* GimbalDevTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15E96E0618DCF2DC0092C115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E4E18DCF9D90092C115 /* FYX.framework */,
+				15E96E4F18DCF9D90092C115 /* ContextLocation.embeddedframework */,
+				15E96E5318DCF9D90092C115 /* ContextCore.embeddedframework */,
+				15E96E5618DCF9D90092C115 /* NetworkServices.embeddedframework */,
+				15E96E5918DCF9D90092C115 /* Common.embeddedframework */,
+				15E96E4018DCF6860092C115 /* Security.framework */,
+				15E96E3E18DCF6800092C115 /* MapKit.framework */,
+				15E96E3C18DCF6790092C115 /* libz.dylib */,
+				15E96E3A18DCF6720092C115 /* CoreData.framework */,
+				15E96E3818DCF6630092C115 /* CoreLocation.framework */,
+				15E96E3618DCF50B0092C115 /* CoreBluetooth.framework */,
+				15E96E0718DCF2DC0092C115 /* Foundation.framework */,
+				15E96E0918DCF2DC0092C115 /* CoreGraphics.framework */,
+				15E96E0B18DCF2DC0092C115 /* UIKit.framework */,
+				15E96E2018DCF2DC0092C115 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15E96E0D18DCF2DC0092C115 /* GimbalDev */ = {
+			isa = PBXGroup;
+			children = (
+				1ADE851B18E7DC870082E386 /* Managers */,
+				1ADE851A18E7DC650082E386 /* Screens & Navigation */,
+				15E96E1618DCF2DC0092C115 /* AppDelegate.h */,
+				15E96E1718DCF2DC0092C115 /* AppDelegate.m */,
+				15E96E1918DCF2DC0092C115 /* Images.xcassets */,
+				15E96E0E18DCF2DC0092C115 /* Supporting Files */,
+				1ADE851418E7D4BC0082E386 /* LocalNotificationHelper.h */,
+				1ADE851518E7D4BC0082E386 /* LocalNotificationHelper.m */,
+				1ADE851718E7D5850082E386 /* DeepLinkHelper.h */,
+				1ADE851818E7D5850082E386 /* DeepLinkHelper.m */,
+			);
+			path = GimbalDev;
+			sourceTree = "<group>";
+		};
+		15E96E0E18DCF2DC0092C115 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E0F18DCF2DC0092C115 /* GimbalDev-Info.plist */,
+				15E96E1018DCF2DC0092C115 /* InfoPlist.strings */,
+				15E96E1318DCF2DC0092C115 /* main.m */,
+				15E96E1518DCF2DC0092C115 /* GimbalDev-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15E96E2618DCF2DC0092C115 /* GimbalDevTests */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E2C18DCF2DC0092C115 /* GimbalDevTests.m */,
+				15E96E2718DCF2DC0092C115 /* Supporting Files */,
+			);
+			path = GimbalDevTests;
+			sourceTree = "<group>";
+		};
+		15E96E2718DCF2DC0092C115 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E2818DCF2DC0092C115 /* GimbalDevTests-Info.plist */,
+				15E96E2918DCF2DC0092C115 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15E96E4F18DCF9D90092C115 /* ContextLocation.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E5018DCF9D90092C115 /* ContextLocation.framework */,
+				15E96E5118DCF9D90092C115 /* Resources */,
+			);
+			path = ContextLocation.embeddedframework;
+			sourceTree = "<group>";
+		};
+		15E96E5118DCF9D90092C115 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E5218DCF9D90092C115 /* DataModels.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15E96E5318DCF9D90092C115 /* ContextCore.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E5418DCF9D90092C115 /* ContextCore.framework */,
+				15E96E5518DCF9D90092C115 /* Resources */,
+			);
+			path = ContextCore.embeddedframework;
+			sourceTree = "<group>";
+		};
+		15E96E5518DCF9D90092C115 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15E96E5618DCF9D90092C115 /* NetworkServices.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E5718DCF9D90092C115 /* NetworkServices.framework */,
+				15E96E5818DCF9D90092C115 /* Resources */,
+			);
+			path = NetworkServices.embeddedframework;
+			sourceTree = "<group>";
+		};
+		15E96E5818DCF9D90092C115 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15E96E5918DCF9D90092C115 /* Common.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E5A18DCF9D90092C115 /* Common.framework */,
+				15E96E5B18DCF9D90092C115 /* Resources */,
+			);
+			path = Common.embeddedframework;
+			sourceTree = "<group>";
+		};
+		15E96E5B18DCF9D90092C115 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1ADE851A18E7DC650082E386 /* Screens & Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1A38838118DE3523007E43A4 /* SettingsViewController.h */,
+				1A38838218DE3523007E43A4 /* SettingsViewController.m */,
+				1A38838718DE355C007E43A4 /* ShopperOutOfRangeViewController.h */,
+				1A38838818DE355C007E43A4 /* ShopperOutOfRangeViewController.m */,
+				1A38838A18DE3568007E43A4 /* ShopperInStoreViewController.h */,
+				1A38838B18DE3568007E43A4 /* ShopperInStoreViewController.m */,
+				1A38838D18DE3880007E43A4 /* ShopperNavigationController.h */,
+				1A38838E18DE3880007E43A4 /* ShopperNavigationController.m */,
+			);
+			name = "Screens & Navigation";
+			sourceTree = "<group>";
+		};
+		1ADE851B18E7DC870082E386 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				15E96E6218DCFB2B0092C115 /* ProximityServiceManager.h */,
+				15E96E6318DCFB2B0092C115 /* ProximityServiceManager.m */,
+				1ADE851C18E7DCAF0082E386 /* VisistManager.h */,
+				1ADE851D18E7DCAF0082E386 /* VisistManager.m */,
+				1ADE851F18E7DE1A0082E386 /* SightingManager.h */,
+				1ADE852018E7DE1A0082E386 /* SightingManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15E96E0318DCF2DC0092C115 /* gimbaldev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E96E3018DCF2DC0092C115 /* Build configuration list for PBXNativeTarget "gimbaldev" */;
+			buildPhases = (
+				15E96E0018DCF2DC0092C115 /* Sources */,
+				15E96E0118DCF2DC0092C115 /* Frameworks */,
+				15E96E0218DCF2DC0092C115 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gimbaldev;
+			productName = GimbalDev;
+			productReference = 15E96E0418DCF2DC0092C115 /* gimbaldev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15E96E1E18DCF2DC0092C115 /* GimbalDevTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E96E3318DCF2DC0092C115 /* Build configuration list for PBXNativeTarget "GimbalDevTests" */;
+			buildPhases = (
+				15E96E1B18DCF2DC0092C115 /* Sources */,
+				15E96E1C18DCF2DC0092C115 /* Frameworks */,
+				15E96E1D18DCF2DC0092C115 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15E96E2518DCF2DC0092C115 /* PBXTargetDependency */,
+			);
+			name = GimbalDevTests;
+			productName = GimbalDevTests;
+			productReference = 15E96E1F18DCF2DC0092C115 /* GimbalDevTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15E96DFC18DCF2DC0092C115 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Nurun;
+				TargetAttributes = {
+					15E96E0318DCF2DC0092C115 = {
+						DevelopmentTeam = Z9XA5CJ9CB;
+					};
+					15E96E1E18DCF2DC0092C115 = {
+						TestTargetID = 15E96E0318DCF2DC0092C115;
+					};
+				};
+			};
+			buildConfigurationList = 15E96DFF18DCF2DC0092C115 /* Build configuration list for PBXProject "GimbalDev" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15E96DFB18DCF2DC0092C115;
+			productRefGroup = 15E96E0518DCF2DC0092C115 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15E96E0318DCF2DC0092C115 /* gimbaldev */,
+				15E96E1E18DCF2DC0092C115 /* GimbalDevTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15E96E0218DCF2DC0092C115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E96E1218DCF2DC0092C115 /* InfoPlist.strings in Resources */,
+				15E96E1A18DCF2DC0092C115 /* Images.xcassets in Resources */,
+				15E96E5E18DCF9D90092C115 /* DataModels.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E96E1D18DCF2DC0092C115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E96E2B18DCF2DC0092C115 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15E96E0018DCF2DC0092C115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E96E6418DCFB2B0092C115 /* ProximityServiceManager.m in Sources */,
+				1ADE852118E7DE1A0082E386 /* SightingManager.m in Sources */,
+				15E96E1818DCF2DC0092C115 /* AppDelegate.m in Sources */,
+				15E96E1418DCF2DC0092C115 /* main.m in Sources */,
+				1A38838C18DE3568007E43A4 /* ShopperInStoreViewController.m in Sources */,
+				1A38838918DE355C007E43A4 /* ShopperOutOfRangeViewController.m in Sources */,
+				1A38838F18DE3880007E43A4 /* ShopperNavigationController.m in Sources */,
+				1ADE851618E7D4BC0082E386 /* LocalNotificationHelper.m in Sources */,
+				1A38838318DE3523007E43A4 /* SettingsViewController.m in Sources */,
+				1ADE851918E7D5850082E386 /* DeepLinkHelper.m in Sources */,
+				1ADE851E18E7DCAF0082E386 /* VisistManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E96E1B18DCF2DC0092C115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E96E2D18DCF2DC0092C115 /* GimbalDevTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15E96E2518DCF2DC0092C115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15E96E0318DCF2DC0092C115 /* gimbaldev */;
+			targetProxy = 15E96E2418DCF2DC0092C115 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15E96E1018DCF2DC0092C115 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15E96E1118DCF2DC0092C115 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		15E96E2918DCF2DC0092C115 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15E96E2A18DCF2DC0092C115 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15E96E2E18DCF2DC0092C115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15E96E2F18DCF2DC0092C115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15E96E3118DCF2DC0092C115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
+					"$(PROJECT_DIR)/ContextCore.embeddedframework",
+					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
+					"$(PROJECT_DIR)/Common.embeddedframework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimbalDev/GimbalDev-Prefix.pch";
+				INFOPLIST_FILE = "GimbalDev/GimbalDev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		15E96E3218DCF2DC0092C115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
+					"$(PROJECT_DIR)/ContextCore.embeddedframework",
+					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
+					"$(PROJECT_DIR)/Common.embeddedframework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimbalDev/GimbalDev-Prefix.pch";
+				INFOPLIST_FILE = "GimbalDev/GimbalDev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		15E96E3418DCF2DC0092C115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GimbalDev.app/GimbalDev";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimbalDev/GimbalDev-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GimbalDevTests/GimbalDevTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		15E96E3518DCF2DC0092C115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GimbalDev.app/GimbalDev";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GimbalDev/GimbalDev-Prefix.pch";
+				INFOPLIST_FILE = "GimbalDevTests/GimbalDevTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15E96DFF18DCF2DC0092C115 /* Build configuration list for PBXProject "GimbalDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E96E2E18DCF2DC0092C115 /* Debug */,
+				15E96E2F18DCF2DC0092C115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E96E3018DCF2DC0092C115 /* Build configuration list for PBXNativeTarget "gimbaldev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E96E3118DCF2DC0092C115 /* Debug */,
+				15E96E3218DCF2DC0092C115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E96E3318DCF2DC0092C115 /* Build configuration list for PBXNativeTarget "GimbalDevTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E96E3418DCF2DC0092C115 /* Debug */,
+				15E96E3518DCF2DC0092C115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15E96DFC18DCF2DC0092C115 /* Project object */;
+}
