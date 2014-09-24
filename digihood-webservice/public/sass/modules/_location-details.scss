@@ -1,0 +1,21 @@
+.location-details {
+  margin: 100px 0 125px;
+                    
+  .map-container {
+    img {
+      border: 1px solid $gray70;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  }  
+
+  .details-list li {
+    display: block;
+    margin-bottom: $grid_background_baseline_height;
+  }
+
+  .details-desc-content {
+    margin-top: $grid_background_baseline_height;
+  }
+}  
