@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         // setup beacons
         var b1:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6", identifier:"Marcus")
-        var b2:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA7", identifier:"Roberta")
-        var b3:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA8", identifier:"Abeacon")
+        var b2:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA7", identifier:"Abeacon")
+        var b3:BeaconDescriptor = BeaconDescriptor(uuid:"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA8", identifier:"Roberta")
         
         beaconIdentifiers.append(b1)
         beaconIdentifiers.append(b2)
@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         var b1String = b1.identifier
         var uid1 = NSUUID(UUIDString: b1ID)
         let beaconRegion1:CLBeaconRegion = CLBeaconRegion(proximityUUID: uid1, identifier: b1String)
+        
         // initialize beacon manager
         locationManager1 = CLLocationManager()
         if(locationManager1!.respondsToSelector("requestAlwaysAuthorization")) {
@@ -51,7 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         locationManager1!.delegate = self
         locationManager1!.pausesLocationUpdatesAutomatically = false
-
         locationManager1!.startMonitoringForRegion(beaconRegion1)
         locationManager1!.startRangingBeaconsInRegion(beaconRegion1)
         locationManager1!.startUpdatingLocation()
@@ -69,7 +69,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         locationManager2!.delegate = self
         locationManager2!.pausesLocationUpdatesAutomatically = false
-        
         locationManager2!.startMonitoringForRegion(beaconRegion2)
         locationManager2!.startRangingBeaconsInRegion(beaconRegion2)
         locationManager2!.startUpdatingLocation()
@@ -87,11 +86,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         locationManager3!.delegate = self
         locationManager3!.pausesLocationUpdatesAutomatically = false
-        
         locationManager3!.startMonitoringForRegion(beaconRegion3)
         locationManager3!.startRangingBeaconsInRegion(beaconRegion3)
         locationManager3!.startUpdatingLocation()
-        
+
         return true
     }
 
@@ -147,22 +145,27 @@ extension AppDelegate: CLLocationManagerDelegate {
         didRangeBeacons beacons: [AnyObject]!,
         inRegion region: CLBeaconRegion!) {
             let viewController:ViewController = window!.rootViewController as ViewController
-            viewController.beacons = beacons as [CLBeacon]
-            viewController.beaconIdentifiers = beaconIdentifiers
-            viewController.tableView.reloadData()
+            //viewController.beacons = beacons as [CLBeacon]
+            //viewController.beaconIdentifiers = beaconIdentifiers
+
+            //viewController.tableView.reloadData()
+            
+            println("I am \(region.identifier)")
             
             var message:String = ""
             
             if(beacons.count > 0) {
+                //println("beacons.count \(beacons.count)")
                 let nearestBeacon:CLBeacon = beacons[0] as CLBeacon
-                
-                if(nearestBeacon.proximity == lastProximity ||
-                nearestBeacon.proximity == CLProximity.Unknown) {
-                    return;
-                }
-                
-                lastProximity = nearestBeacon.proximity
-                
+
+//                if(nearestBeacon.proximity == lastProximity ||
+//                nearestBeacon.proximity == CLProximity.Unknown) {
+//                    return
+//                }
+
+                println("nearest beacon \(nearestBeacon.proximityUUID.UUIDString)")
+//                lastProximity = nearestBeacon.proximity
+
                 switch nearestBeacon.proximity {
                 case CLProximity.Far:
                     message = "You are far away from the beacon"
@@ -173,9 +176,12 @@ extension AppDelegate: CLLocationManagerDelegate {
                 case CLProximity.Unknown:
                     return
                 }
+                
+                viewController.updateDataFor(nearestBeacon)
             } else {
                 message = "No beacons are nearby"
             }
+            
             
             NSLog("%@", message)
             sendLocalNotificationWithMessage(message)
