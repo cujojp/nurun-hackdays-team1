@@ -12,14 +12,29 @@ import CoreLocation
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var beacons:[CLBeacon] = []
     var beaconIdentifiers:[BeaconDescriptor] = []
+    @IBOutlet weak var dontation: UILabel!
+    @IBOutlet weak var callToAction: UILabel!
+    @IBOutlet weak var moreInfo: UILabel!
+    @IBOutlet weak var swipeCatcher: UIView!
     
     @IBOutlet weak var abeaconData: UILabel!
     @IBOutlet weak var marcusData: UILabel!
     @IBOutlet weak var robertaData: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
+//    let tapRec = UITapGestureRecognizer()
+//    let pinchRec = UIPinchGestureRecognizer()
+//    let swipeRec = UISwipeGestureRecognizer()
+//    let longPressRec = UILongPressGestureRecognizer()
+//    let rotateRec = UIRotationGestureRecognizer()
+//    let panRec = UIPanGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        swipeCatcher.addGestureRecognizer(swipeRec)
+//        swipeRec.addTarget(self, action: "showConfirmation")
+//        swipeCatcher.userInteractionEnabled = true
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,7 +44,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     override func viewDidAppear(animated: Bool) {
-
+        
+    }
+    
+    func showConfirmation() {
+//        let tapAlert = UIAlertController(title: "Swiped", message: "You just swiped the swipe view", preferredStyle: UIAlertControllerStyle.Alert)
+//        tapAlert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+//        self.presentViewController(tapAlert, animated: true, completion: nil)
     }
     
     func updateDataFor(beacon:CLBeacon) {
@@ -37,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var detailLabel:String = "Major: \(beacon.major.integerValue), " +
             "Minor: \(beacon.minor.integerValue), " +
             "RSSI: \(beacon.rssi as Int), " +
-        "UUID: \(beacon.proximityUUID.UUIDString)"
+            "UUID: \(beacon.proximityUUID.UUIDString)"
         
         var proximityLabel:String! = ""
         

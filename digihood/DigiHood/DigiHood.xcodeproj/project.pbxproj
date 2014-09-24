@@ -15,6 +15,10 @@
 		833023A119D1E96800AC5230 /* DigiHoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833023A019D1E96800AC5230 /* DigiHoodTests.swift */; };
 		833023AB19D1EDDD00AC5230 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833023AA19D1EDDD00AC5230 /* CoreLocation.framework */; };
 		833023AD19D225AD00AC5230 /* BeaconDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833023AC19D225AD00AC5230 /* BeaconDescriptor.swift */; };
+		83B511CD19D33DBD00748A81 /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B511CC19D33DBD00748A81 /* IntroController.swift */; };
+		83B511CF19D3405C00748A81 /* RewardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B511CE19D3405C00748A81 /* RewardController.swift */; };
+		83B511D119D349A400748A81 /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B511D019D349A400748A81 /* ShareController.swift */; };
+		83B511D319D34F4700748A81 /* IMG_0003.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 83B511D219D34F4700748A81 /* IMG_0003.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		833023A019D1E96800AC5230 /* DigiHoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigiHoodTests.swift; sourceTree = "<group>"; };
 		833023AA19D1EDDD00AC5230 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		833023AC19D225AD00AC5230 /* BeaconDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDescriptor.swift; sourceTree = "<group>"; };
+		83B511CC19D33DBD00748A81 /* IntroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
+		83B511CE19D3405C00748A81 /* RewardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardController.swift; sourceTree = "<group>"; };
+		83B511D019D349A400748A81 /* ShareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
+		83B511D219D34F4700748A81 /* IMG_0003.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_0003.PNG; path = ../../../../../../Pictures/IMG_0003.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +95,13 @@
 				8330238C19D1E96800AC5230 /* ViewController.swift */,
 				8330238E19D1E96800AC5230 /* Main.storyboard */,
 				8330239119D1E96800AC5230 /* Images.xcassets */,
+				83B511D219D34F4700748A81 /* IMG_0003.PNG */,
 				8330239319D1E96800AC5230 /* LaunchScreen.xib */,
 				8330238819D1E96800AC5230 /* Supporting Files */,
 				833023AC19D225AD00AC5230 /* BeaconDescriptor.swift */,
+				83B511CC19D33DBD00748A81 /* IntroController.swift */,
+				83B511CE19D3405C00748A81 /* RewardController.swift */,
+				83B511D019D349A400748A81 /* ShareController.swift */,
 			);
 			path = DigiHood;
 			sourceTree = "<group>";
@@ -207,6 +219,7 @@
 			files = (
 				8330239019D1E96800AC5230 /* Main.storyboard in Resources */,
 				8330239519D1E96800AC5230 /* LaunchScreen.xib in Resources */,
+				83B511D319D34F4700748A81 /* IMG_0003.PNG in Resources */,
 				8330239219D1E96800AC5230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B511CD19D33DBD00748A81 /* IntroController.swift in Sources */,
+				83B511CF19D3405C00748A81 /* RewardController.swift in Sources */,
 				8330238D19D1E96800AC5230 /* ViewController.swift in Sources */,
+				83B511D119D349A400748A81 /* ShareController.swift in Sources */,
 				833023AD19D225AD00AC5230 /* BeaconDescriptor.swift in Sources */,
 				8330238B19D1E96800AC5230 /* AppDelegate.swift in Sources */,
 			);
@@ -419,6 +435,7 @@
 				833023A619D1E96800AC5230 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		833023A719D1E96800AC5230 /* Build configuration list for PBXNativeTarget "DigiHoodTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +444,7 @@
 				833023A919D1E96800AC5230 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
