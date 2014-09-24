@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
 /**
  * Will run from a form submision and submit new data.
  */
-router.post('/api/add-location/', function(req, res) {
+router.post('/api/add-beacon/', function(req, res) {
   // Set our internal DB variable
 });
 
@@ -18,14 +18,7 @@ router.post('/api/add-location/', function(req, res) {
 /**
  * Will remove a location from the database
  */
-router.delete('/api/remove-location/:id', function(req, res) {
-});
-
-
-/**
- * Will let users edit a location from the database.
- */
-router.post('/api/edit-location/:id', function(req, res) {
+router.delete('/api/remove-beacon/:id', function(req, res) {
 });
 
 
@@ -33,14 +26,27 @@ router.post('/api/edit-location/:id', function(req, res) {
 /**
  * Landing page for locations. Will load all locations in the database.
  */
-router.get('/api/get-locations/data.json', function(req, res) {
+router.get('/api/get-beacon/data.json', function(req, res) {
 });
 
 
 /**
- * Landing page for locations. Will load all locations in the database.
+ * Returns an json array of information based on the beacon.
  */
-router.get('/api/get-location/:id/data.json', function(req, res) {
+router.get('/api/get-beacon/:id/data.json', function(req, res) {
+  //var db = req.db;
+  //var collection = db.collection('locationscollection');
+  //var locationId = req.params.id;
+
+  //console.log(locationId);
+  //collection.findOne({'_id': ObjectID(locationId)},{},function(err, results){
+    //console.log(results);
+    //if (err) {
+      //return res.json({ "error" : err });
+    //} else {
+      //return res.json({ "location" : results });
+    //}
+  //});  
 });
 
 module.exports = router;
