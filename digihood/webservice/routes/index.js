@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var Firebase = require('firebase');
+var _ = require('underscore');
 
 /* GET Home page. */
 router.get('/', function(req, res) {
@@ -26,7 +28,12 @@ router.delete('/api/remove-beacon/:id', function(req, res) {
 /**
  * Landing page for locations. Will load all locations in the database.
  */
-router.get('/api/get-beacon/data.json', function(req, res) {
+router.get('/api/get-beacons/data.json', function(req, res) {
+  var objRef = new Firebase("https://digihood.firebaseio.com/beacons/").once('value', function(snap) {
+    var results = snap.val();
+
+    res.json({ "beacons" : results });
+  }); 
 });
 
 
@@ -36,9 +43,18 @@ router.get('/api/get-beacon/data.json', function(req, res) {
 router.get('/api/get-beacon/:id/data.json', function(req, res) {
   //var db = req.db;
   //var collection = db.collection('locationscollection');
-  //var locationId = req.params.id;
+  var locationId = req.params.id;
 
-  //console.log(locationId);
+  var objRef = new Firebase("https://digihood.firebaseio.com/beacons/").once('value', function(snap) {
+    var results = snap.val();
+
+    _.find(results, function(beacon) {
+      if (locationId === beacon.id) {
+        res.json({ "beacon" : beacon });
+      }
+    });
+  });
+
   //collection.findOne({'_id': ObjectID(locationId)},{},function(err, results){
     //console.log(results);
     //if (err) {
