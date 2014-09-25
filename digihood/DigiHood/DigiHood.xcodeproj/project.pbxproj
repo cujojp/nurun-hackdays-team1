@@ -19,7 +19,6 @@
 		83B511D119D349A400748A81 /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B511D019D349A400748A81 /* ShareController.swift */; };
 		83E3366419D3A8C500FD079F /* WinnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E3366319D3A8C500FD079F /* WinnerController.swift */; };
 		83E3366B19D3B65600FD079F /* ap-ladies-model-left-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E3366619D3B65600FD079F /* ap-ladies-model-left-bg.jpg */; };
-		83E3366C19D3B65600FD079F /* ap-ladies-model-left-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E3366819D3B65600FD079F /* ap-ladies-model-left-bg.jpg */; };
 		83E3366D19D3B65600FD079F /* watch_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E3366919D3B65600FD079F /* watch_transparent.png */; };
 		83E3366E19D3B65600FD079F /* welcomeStranger.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E3366A19D3B65600FD079F /* welcomeStranger.png */; };
 		83E3367019D3C06400FD079F /* hoodyIntro.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E3366F19D3C06400FD079F /* hoodyIntro.png */; };
@@ -249,7 +248,6 @@
 				8330239019D1E96800AC5230 /* Main.storyboard in Resources */,
 				83E3366B19D3B65600FD079F /* ap-ladies-model-left-bg.jpg in Resources */,
 				83E3366E19D3B65600FD079F /* welcomeStranger.png in Resources */,
-				83E3366C19D3B65600FD079F /* ap-ladies-model-left-bg.jpg in Resources */,
 				83E3366D19D3B65600FD079F /* watch_transparent.png in Resources */,
 				83E3367019D3C06400FD079F /* hoodyIntro.png in Resources */,
 				8330239219D1E96800AC5230 /* Images.xcassets in Resources */,
@@ -330,6 +328,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: NURUN SF INC.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NURUN SF INC.";
 				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -348,6 +347,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "489a7025-cb7b-4ebd-a02c-564c1a4d0d12";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -373,6 +373,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: NURUN SF INC.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NURUN SF INC.";
 				COPY_PHASE_STRIP = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -384,6 +385,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "489a7025-cb7b-4ebd-a02c-564c1a4d0d12";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -393,12 +395,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NURUN SF INC.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NURUN SF INC.";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DigiHood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "489a7025-cb7b-4ebd-a02c-564c1a4d0d12";
 			};
 			name = Debug;
 		};
@@ -406,12 +409,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NURUN SF INC.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NURUN SF INC.";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DigiHood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "489a7025-cb7b-4ebd-a02c-564c1a4d0d12";
 			};
 			name = Release;
 		};
