@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832E74CC19D39F7100B8880D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E74CB19D39F7100B8880D /* CoreLocation.framework */; };
 		83B511E319D39BC700748A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B511E219D39BC700748A81 /* AppDelegate.swift */; };
 		83B511E519D39BC700748A81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B511E419D39BC700748A81 /* ViewController.swift */; };
 		83B511E819D39BC700748A81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B511E619D39BC700748A81 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832E74CB19D39F7100B8880D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		83B511DD19D39BC700748A81 /* Hoody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B511E119D39BC700748A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B511E219D39BC700748A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E74CC19D39F7100B8880D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +70,7 @@
 		83B511D419D39BC700748A81 = {
 			isa = PBXGroup;
 			children = (
+				832E74CB19D39F7100B8880D /* CoreLocation.framework */,
 				83B511DF19D39BC700748A81 /* Hoody */,
 				83B511F519D39BC800748A81 /* HoodyTests */,
 				83B511DE19D39BC700748A81 /* Products */,
