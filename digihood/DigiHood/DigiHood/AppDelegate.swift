@@ -13,6 +13,7 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
+    var application:UIApplication!
     var locationManager1: CLLocationManager?
     var locationManager2: CLLocationManager?
     var locationManager3: CLLocationManager?
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     var beaconIdentifiers: [BeaconDescriptor] = []
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        self.application = application
         
         if(application.respondsToSelector("registerUserNotificationSettings:")) {
             application.registerUserNotificationSettings(
@@ -122,6 +125,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func getNotificationDataFor() {
         
     }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler handler: (UIBackgroundFetchResult) -> Void) {
+        let state = application.applicationState
+        if (state == UIApplicationState.Inactive || state == UIApplicationState.Background) {
+            // go to screen relevant to Notification content
+            println("I GOT A MESSAGE FROM BACKGROUND STATE!!!")
+            let viewController:ViewController = window!.rootViewController as ViewController
+            viewController.logo.hidden = true
+
+        } else {
+            // App is in UIApplicationStateActive (running in foreground)
+            // perhaps show an UIAlertView
+            println("I GOT A MESSAGE FROM INTERNAL STATE!!!")
+        }
+
+    }
 
 }
 
@@ -169,6 +188,20 @@ extension AppDelegate: CLLocationManagerDelegate {
             let viewController:ViewController = window!.rootViewController as ViewController
             var message:String = ""
             var curBeacon:String = ""
+            
+            let state = application.applicationState
+            if (state == UIApplicationState.Inactive || state == UIApplicationState.Background) {
+                // go to screen relevant to Notification content
+                println("I GOT A MESSAGE FROM BACKGROUND STATE!!!")
+                let viewController:ViewController = window!.rootViewController as ViewController
+                viewController.logo.hidden = true
+                
+            } else {
+                // App is in UIApplicationStateActive (running in foreground)
+                // perhaps show an UIAlertView
+                println("I GOT A MESSAGE FROM INTERNAL STATE!!!")
+            }
+            
             if(beacons.count > 0) {
                 //println("beacons.count \(beacons.count)")
                 let nearestBeacon:CLBeacon = beacons[0] as CLBeacon
