@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     var beacons:[CLBeacon] = []
     var beaconIdentifiers:[BeaconDescriptor] = []
     let serversDown:String = "http://digihood-webservice.herokuapp.com/api/update-beacon/"
@@ -68,55 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             println("No HTTP response")
         }
-        
-        
-//        let requestData = [
-//            "id" : "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6",
-//            "phone" : "4158440048"
-//        ]
-//        
-//        let url = NSURL(string: serversDown)
-//        let request = NSMutableURLRequest(URL: url)
-//        request.HTTPMethod = "POST"
-//        request.setValue("json-rpc", forHTTPHeaderField: "Content-Type")
-//        
-//        var error: NSError?
-//        let requestBody = NSJSONSerialization.dataWithJSONObject(requestData, options: nil, error: &error)
-//        if requestBody == nil {
-//            completion(responseObject: nil, error: &error)
-//            return nil
-//        }
-//        
-//        request.HTTPBody = requestBody
-//        
-//        let task = session.dataTaskWithRequest(request) {
-//            
-//        }
-//        let url = NSURL(string:"")
-//        let cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
-//        var request = NSMutableURLRequest(URL: url, cachePolicy: cachePolicy, timeoutInterval: 2.0)
-//        request.HTTPMethod = "POST"
-//        
-//        // set Content-Type in HTTP header
-//        let boundaryConstant = "----------V2ymHFg03esomerandomstuffhbqgZCaKO6jy";
-//        let contentType = "multipart/form-data; boundary=" + boundaryConstant
-//        NSURLProtocol.setProperty(contentType, forKey: "Content-Type", inRequest: request)
-//        
-//        // set data
-//        var dataString = "id=2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6&phone=4158440048"
-//        let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-//        request.HTTPBody = requestBodyData
-//
-//        // set content length
-//        NSURLProtocol.setProperty(requestBodyData.length, forKey: "Content-Length", inRequest: request)
-//        
-//        var response: NSURLResponse? = nil
-//        var error: NSError? = nil
-//        let reply = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&error)
-//        
-//        let results = NSString(data:reply!, encoding:NSUTF8StringEncoding)
-//        println("API Response: \(results)")
-        
+
     }
     
     @IBAction func showRedemption(sender: AnyObject) {
@@ -133,6 +85,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         submitButton.hidden = true
         phoneNumber.hidden = true
+        phoneNumber.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -143,6 +96,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidAppear(animated: Bool) {
         
     }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     func showConfirmation() {
     }

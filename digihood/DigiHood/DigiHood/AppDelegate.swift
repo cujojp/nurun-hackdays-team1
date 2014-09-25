@@ -148,17 +148,22 @@ extension AppDelegate: CLLocationManagerDelegate {
     func sendLocalNotificationWithMessage(message: String!, whichBeacon:String?) {
         let notification:UILocalNotification = UILocalNotification()
         println("NOTIFICAITON MESSAGE: \(message)")
+        var name = whichBeacon?
+        if name == nil {
+            name = "Hoody"
+        }
         switch message {
             case "No beacons are nearby":
                 break   
             case "You are far away from the beacon":
                 break
             case "You are near the beacon":
-                notification.alertBody = "\(whichBeacon?) says hello! Donate $1 now"
+
+                notification.alertBody = "\(name) says hello! Tap to see more"
                 UIApplication.sharedApplication().scheduleLocalNotification(notification)
                 break
             case "You are in the immediate proximity of the beacon":
-                notification.alertBody = "\(whichBeacon?) says hello! So close! Donate $1 now"
+                notification.alertBody = "\(name) is very close to you! Tap to see more."
                 UIApplication.sharedApplication().scheduleLocalNotification(notification)
                 break
         default:
