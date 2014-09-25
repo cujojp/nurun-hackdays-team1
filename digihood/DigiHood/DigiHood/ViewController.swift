@@ -50,10 +50,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var error: NSError?
         
         // create some JSON data and configure the request
-        let jsonString = "{\"id\":\"\(MarcusId)\",\"num\":1,\"str\":\"You are a bad ass\",\"num\":\"\(phoneNumber.text)\"}"
+        //let jsonString = "{\"id\":\"\(MarcusId)\",\"num\":1,\"str\":\"You are a bad ass\",\"num\":\"\(phoneNumber.text)\"}"
+        let jsonString = "id=\(MarcusId)&phone=\(phoneNumber.text)"
         request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         request.HTTPMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        //application/x-www-form-urlencoded
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        //request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         println(jsonString)
         // send the request
         NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
