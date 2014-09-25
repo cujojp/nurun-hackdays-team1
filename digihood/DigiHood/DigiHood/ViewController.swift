@@ -16,7 +16,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var callToAction: UILabel!
     @IBOutlet weak var moreInfo: UILabel!
     @IBOutlet weak var swipeCatcher: UIView!
+    @IBOutlet weak var claimPrize: UIButton!
     
+    @IBOutlet weak var noPrize: UILabel!
     @IBOutlet weak var abeaconData: UILabel!
     @IBOutlet weak var marcusData: UILabel!
     @IBOutlet weak var robertaData: UILabel!
@@ -31,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        noPrize.hidden = true
 //        swipeCatcher.addGestureRecognizer(swipeRec)
 //        swipeRec.addTarget(self, action: "showConfirmation")
 //        swipeCatcher.userInteractionEnabled = true
